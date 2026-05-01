@@ -3,14 +3,10 @@ export interface Drummer {
   id: string;
   name: string;
   slug: string;
-  real_name: string | null;        // Legal name if different (e.g., "Richard Starkey")
-  nicknames: string[] | null;      // e.g., ["Bonzo", "The Beast"]
   birth_date: string | null;
   death_date: string | null;
   birth_place: string | null;
   nationality: string | null;
-  years_active: string | null;     // e.g., "1962-1980" or "1983-present"
-  handed: 'right' | 'left' | 'ambidextrous' | null;
   bio_short: string;
   bio_full: string | null;
   photo_url: string | null;

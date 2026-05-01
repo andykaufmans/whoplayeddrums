@@ -125,20 +125,6 @@ export default function DrummerPage({ params }: DrummerPageProps) {
                 <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-ink-100">
                   {drummer.name}
                 </h1>
-                
-                {/* Real name & nicknames */}
-                {(drummer.real_name || drummer.nicknames) && (
-                  <div className="mt-2 text-sm text-ink-500">
-                    {drummer.real_name && drummer.real_name !== drummer.name && (
-                      <span>Born {drummer.real_name}</span>
-                    )}
-                    {drummer.nicknames && drummer.nicknames.length > 0 && (
-                      <span className={drummer.real_name ? ' • ' : ''}>
-                        aka "{drummer.nicknames.join('", "')}"
-                      </span>
-                    )}
-                  </div>
-                )}
 
                 {/* Meta Info */}
                 <div className="mt-4 flex flex-wrap gap-4 text-sm text-ink-400">
@@ -159,20 +145,6 @@ export default function DrummerPage({ params }: DrummerPageProps) {
                       <MapPin size={16} className="text-gold-500" />
                       <span>{drummer.birth_place}</span>
                     </div>
-                  )}
-                </div>
-                
-                {/* Additional details */}
-                <div className="mt-3 flex flex-wrap gap-3">
-                  {drummer.years_active && (
-                    <span className="px-2 py-1 text-xs font-mono border border-ink-700 text-ink-400">
-                      Active: {drummer.years_active}
-                    </span>
-                  )}
-                  {drummer.handed && (
-                    <span className="px-2 py-1 text-xs font-mono border border-ink-700 text-ink-400">
-                      {drummer.handed.charAt(0).toUpperCase() + drummer.handed.slice(1)}-handed
-                    </span>
                   )}
                 </div>
 
